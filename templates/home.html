@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+
+{% block title %}الصفحة الرئيسية - متجر إلكتروني{% endblock %}
+
+{% block content %}
+<div class="hero-section bg-light py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h1 class="display-4 fw-bold">مرحباً بك في متجرنا الإلكتروني</h1>
+                <p class="lead">اكتشف أفضل المنتجات بأسعار تنافسية وخدمة توصيل سريعة</p>
+                <a href="#" class="btn btn-primary btn-lg">تسوق الآن</a>
+            </div>
+            <div class="col-md-6">
+                <img src="https://via.placeholder.com/600x400" alt="Hero Image" class="img-fluid rounded">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container my-5">
+    <h2 class="text-center mb-4">الفئات الرئيسية</h2>
+    <div class="row">
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Category">
+                <div class="card-body text-center">
+                    <h5 class="card-title">إلكترونيات</h5>
+                    <a href="#" class="btn btn-outline-primary">تصفح</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Category">
+                <div class="card-body text-center">
+                    <h5 class="card-title">أزياء</h5>
+                    <a href="#" class="btn btn-outline-primary">تصفح</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Category">
+                <div class="card-body text-center">
+                    <h5 class="card-title">منزل ومطبخ</h5>
+                    <a href="#" class="btn btn-outline-primary">تصفح</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Category">
+                <div class="card-body text-center">
+                    <h5 class="card-title">رياضة</h5>
+                    <a href="#" class="btn btn-outline-primary">تصفح</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container my-5">
+    <h2 class="text-center mb-4">المنتجات المميزة</h2>
+    <div class="row">
+        {% for i in "123456" %}
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="https://via.placeholder.com/400x300" class="card-img-top" alt="Product">
+                <div class="card-body">
+                    <h5 class="card-title">منتج رقم {{ i }}</h5>
+                    <p class="card-text">وصف مختصر للمنتج هنا</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="h5 mb-0 text-primary">299 ريال</span>
+                        <button class="btn btn-primary">
+                            <i class="fas fa-shopping-cart"></i> أضف للسلة
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">لماذا تختارنا؟</h2>
+        <div class="row">
+            <div class="col-md-3 text-center mb-4">
+                <i class="fas fa-shipping-fast fa-3x text-primary mb-3"></i>
+                <h5>شحن سريع</h5>
+                <p>توصيل سريع لجميع المناطق</p>
+            </div>
+            <div class="col-md-3 text-center mb-4">
+                <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
+                <h5>دفع آمن</h5>
+                <p>طرق دفع متعددة وآمنة</p>
+            </div>
+            <div class="col-md-3 text-center mb-4">
+                <i class="fas fa-undo fa-3x text-primary mb-3"></i>
+                <h5>استرجاع سهل</h5>
+                <p>سياسة استرجاع مرنة</p>
+            </div>
+            <div class="col-md-3 text-center mb-4">
+                <i class="fas fa-headset fa-3x text-primary mb-3"></i>
+                <h5>دعم 24/7</h5>
+                <p>فريق دعم متاح دائماً</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
